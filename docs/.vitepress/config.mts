@@ -5,7 +5,24 @@ export default defineConfig({
   title: "ShowcaseApp",
   description: "Showcase Site",
   base: "/showcase-site/",
+  head: [["link", { rel: "icon", href: "images/favicon.ico" }]],
+  locales: {
+    "/": {
+      label: "English",
+      lang: "en-US",
+      title: "ShowcaseApp",
+      description: "Showcase Site",
+      dir: "en-US",
+    },
+    "/zh/": {
+      label: "简体中文",
+      lang: "zh-CN",
+      title: "ShowcaseApp",
+      description: "Showcase Site",
+    },
+  },
   themeConfig: {
+    logo: "images/showcase_logo.png",
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
@@ -67,5 +84,10 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/mrjoechen/ShowcaseApp" },
     ],
+    footer: {
+      message:
+        '<a href="termsconditions.html">Terms conditions</a>    <a href="/privacypolicy.html">Privacy policy</a>',
+      copyright: "Copyright © 2023-present Joe Chen",
+    },
   },
 });

@@ -6,6 +6,9 @@ hero:
   name: "Showcase App"
   text: "Showcase a gallery of lively moments."
   tagline: 动态图片画廊，展示精彩瞬间
+  image:
+    src: images/showcase_logo.png
+    alt: Showcase App
   actions:
     - theme: brand
       text: Download
