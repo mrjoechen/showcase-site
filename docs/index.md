@@ -14,6 +14,9 @@ hero:
       text: Download
       link: /download
     - theme: alt
+      text: Have a try
+      link: https://showcase.joechen.space/app
+    - theme: alt
       text: ✨ Give a Star
       link: https://github.com/mrjoechen/ShowcaseApp
     - theme: alt
