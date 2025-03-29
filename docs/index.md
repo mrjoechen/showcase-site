@@ -20,14 +20,26 @@ hero:
       text: ✨ Give a Star
       link: https://github.com/mrjoechen/ShowcaseApp
     - theme: alt
-      text: ✨ Donate us
+      text: 💖 Donate us
       link: /donate
 
 features:
-  - title: Support multiple image sources
-    details: Support FTP, SFTP, Webdav,and local file system. Of course I'm adding more support for network storage like Google Grive, OneDrive, DropBox...
-  - title: Rich display styles
-    details: You can also configure the style of picture display. Slide, Fade, Framewall, etc.
-  - title: Safe and reliable
+  - icon: 🖼
+    title: Support multiple image sources
+    details: Local device storage,
+            FTP/SFTP,
+            SMB, WebDAV,
+            TMDB movie posters,
+            Unsplash Image source,
+            Pexel Image Source,
+            GitHub repositories
+  - icon: 🎨
+    title: Customizable Display Styles
+    details: You can also configure the style of picture display. Slideshow (Cube, Reveal, Flip), Fade, Framewall, etc.
+  - icon: 🛠️
+    title: Flexible Configuration
+    details: Easily set up and manage your preferred image sources and display settings.
+  - icon: 🔒
+    title: Safe and reliable
     details: Only read the image file and display locally,  no write operation. no upload, no storage, no tracking. Your privacy is safe. No need to worry about the security of the image file.
 ---

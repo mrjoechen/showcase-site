@@ -32,12 +32,12 @@ export default defineConfig({
         text: "Changelog",
         items: [
           {
-            text: "v1.0.26",
-            link: "https://github.com/mrjoechen/ShowcaseApp/releases/tag/v1.0.26",
-          },
-          {
             text: "v1.0.28",
             link: "https://github.com/mrjoechen/ShowcaseApp/releases/tag/v1.0.28",
+          },
+          {
+            text: "v1.0.26",
+            link: "https://github.com/mrjoechen/ShowcaseApp/releases/tag/v1.0.26",
           },
         ],
       },
@@ -83,6 +83,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: "github", link: "https://github.com/mrjoechen/ShowcaseApp" },
+      { icon: "x", link: "https://x.com/chenqiao1104" }
     ],
     footer: {
       message:
