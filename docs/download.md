@@ -10,6 +10,10 @@
 
 [<img src="https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/docs/images/showcase_telegram_group.png" width="254" height="378" />](https://t.me/showcase_app_group)
 
+### Wechat Group
+
+[<img src="https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/resource/showcase_wechat_group.jpg" width="254" height="378" />](https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/resource/showcase_wechat_group.jpg)
+
 - [Donate](https://mrjoechen.github.io/ShowcaseApp/donate)
 - [Privacy policy](https://mrjoechen.github.io/ShowcaseApp/privacypolicy)
 - [Terms and conditions](https://mrjoechen.github.io/ShowcaseApp/termsconditions)
