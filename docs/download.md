@@ -12,7 +12,7 @@
 
 ### Wechat Group
 
-[<img src="https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/resource/showcase_wechat_group.jpg" width="254" height="378" />](https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/resource/showcase_wechat_group.jpg)
+[<img src="https://ghfast.top/https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/resource/showcase_wechat_group.jpg" width="254" height="378" />](https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/resource/showcase_wechat_group.jpg)
 
 - [Donate](https://mrjoechen.github.io/ShowcaseApp/donate)
 - [Privacy policy](https://mrjoechen.github.io/ShowcaseApp/privacypolicy)
