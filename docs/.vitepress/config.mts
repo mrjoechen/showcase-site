@@ -1,10 +1,12 @@
 import { defineConfig } from "vitepress";
 
+const isFirebaseDeploy = process.env.DEPLOY_TARGET === "firebase";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "ShowcaseApp",
   description: "Showcase Site",
-  base: "/showcase-site/",
+  base: isFirebaseDeploy ? "/" : "/showcase-site/",
   head: [["link", { rel: "icon", href: "images/favicon.ico" }]],
   locales: {
     "/": {
