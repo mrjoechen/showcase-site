@@ -1,10 +1,12 @@
-### Google Play Store
+### Download
 
 [<img src="https://ghfast.top/https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/docs/images/google-play-badge.png" width="323" height="125" />](https://play.google.com/store/apps/details?id=com.alpha.showcase)
-
-### GitHub
-
 [<img src="https://ghfast.top/https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/docs/images/github-badge.png" width="323" height="125" />](https://github.com/mrjoechen/ShowcaseApp/releases/latest)
+
+> The iOS version is still on TestFlight.
+
+[<img src="https://ghfast.top/https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/docs/images/apple_app_store_badge.png" width="323" height="125" />](https://testflight.apple.com/join/D8va19RR)
+
 
 ### Telegram Group
 
