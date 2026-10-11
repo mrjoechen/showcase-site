@@ -1,88 +1,204 @@
 import { defineConfig } from "vitepress";
 
 const isFirebaseDeploy = process.env.DEPLOY_TARGET === "firebase";
+const siteBase = isFirebaseDeploy ? "/" : "/showcase-site/";
+
+function withSiteBase(url: string) {
+  if (!url.startsWith("/") || url.startsWith("//")) return url;
+  return `${siteBase}${url}`.replace(/([^:]\/)\/+/g, "$1");
+}
+
+function prefixHtmlImageSrc(content: string) {
+  return content.replace(
+    /(src=["'])(\/(?!\/)[^"']*)/g,
+    (_match, attr, url) => `${attr}${withSiteBase(url)}`
+  );
+}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "ShowcaseApp",
-  description: "Showcase Site",
-  base: isFirebaseDeploy ? "/" : "/showcase-site/",
-  head: [["link", { rel: "icon", href: "images/favicon.ico" }]],
+  description: "A digital photo frame for local photos, network libraries, and your own AI.",
+  base: siteBase,
+  markdown: {
+    config(md) {
+      const imageRule = md.renderer.rules.image;
+      md.renderer.rules.image = (tokens, idx, options, env, self) => {
+        const token = tokens[idx];
+        const url = token.attrGet("src");
+        if (url) token.attrSet("src", withSiteBase(url));
+        return imageRule(tokens, idx, options, env, self);
+      };
+
+      // Raw <img> in Markdown is not rewritten by VitePress, so public images
+      // would miss the GitHub Pages base and 404.
+      md.core.ruler.after("inline", "local-image-base", (state) => {
+        const visit = (tokens: { type: string; content: string; children?: typeof tokens }[]) => {
+          for (const token of tokens) {
+            if (token.type === "html_inline" || token.type === "html_block") {
+              token.content = prefixHtmlImageSrc(token.content);
+            }
+            if (token.children) visit(token.children);
+          }
+        };
+        visit(state.tokens);
+      });
+    },
+  },
+  head: [["link", { rel: "icon", href: "/images/favicon.ico" }]],
   locales: {
-    "/": {
+    root: {
       label: "English",
       lang: "en-US",
       title: "ShowcaseApp",
-      description: "Showcase Site",
-      dir: "en-US",
+      description: "A digital photo frame for local photos, network libraries, and your own AI.",
+      themeConfig: {
+        nav: [
+          { text: "Home", link: "/" },
+          { text: "Download", link: "/download" },
+          {
+            text: "Changelog",
+            items: [
+              {
+                text: "v1.0.57",
+                link: "https://github.com/mrjoechen/ShowcaseApp/releases/tag/v1.0.57",
+              },
+              {
+                text: "v1.0.56",
+                link: "https://github.com/mrjoechen/ShowcaseApp/releases/tag/v1.0.56",
+              },
+              {
+                text: "v1.0.54",
+                link: "https://github.com/mrjoechen/ShowcaseApp/releases/tag/v1.0.54",
+              },
+              {
+                text: "All releases",
+                link: "https://github.com/mrjoechen/ShowcaseApp/releases",
+              },
+            ],
+          },
+          {
+            text: "Help",
+            items: [
+              {
+                text: "FAQ",
+                link: "https://github.com/mrjoechen/ShowcaseApp/wiki",
+              },
+              {
+                text: "Feature request",
+                link: "https://github.com/mrjoechen/ShowcaseApp/issues",
+              },
+              {
+                text: "Report a problem",
+                link: "https://github.com/mrjoechen/ShowcaseApp/issues",
+              },
+              { text: "Privacy policy", link: "/privacypolicy" },
+              { text: "Terms", link: "/termsconditions" },
+            ],
+          },
+        ],
+        sidebar: [
+          {
+            text: "Docs",
+            items: [
+              { text: "Privacy policy", link: "/privacypolicy" },
+              { text: "Terms and conditions", link: "/termsconditions" },
+            ],
+          },
+        ],
+        outline: { label: "On this page" },
+        docFooter: { prev: "Previous", next: "Next" },
+        darkModeSwitchLabel: "Appearance",
+        lightModeSwitchTitle: "Switch to light mode",
+        darkModeSwitchTitle: "Switch to dark mode",
+        sidebarMenuLabel: "Menu",
+        returnToTopLabel: "Back to top",
+        langMenuLabel: "Language",
+        footer: {
+          message:
+            '<a href="termsconditions.html">Terms</a> · <a href="privacypolicy.html">Privacy</a>',
+          copyright: "Copyright © 2023-present Joe Chen",
+        },
+      },
     },
-    "/zh/": {
+    zh: {
       label: "简体中文",
       lang: "zh-CN",
+      link: "/zh/",
       title: "ShowcaseApp",
-      description: "Showcase Site",
+      description: "把设备变成数字相框：本地照片、网络图库，以及你自己的 AI。",
+      themeConfig: {
+        nav: [
+          { text: "首页", link: "/zh/" },
+          { text: "下载", link: "/zh/download" },
+          {
+            text: "更新日志",
+            items: [
+              {
+                text: "v1.0.57",
+                link: "https://github.com/mrjoechen/ShowcaseApp/releases/tag/v1.0.57",
+              },
+              {
+                text: "v1.0.56",
+                link: "https://github.com/mrjoechen/ShowcaseApp/releases/tag/v1.0.56",
+              },
+              {
+                text: "v1.0.54",
+                link: "https://github.com/mrjoechen/ShowcaseApp/releases/tag/v1.0.54",
+              },
+              {
+                text: "全部版本",
+                link: "https://github.com/mrjoechen/ShowcaseApp/releases",
+              },
+            ],
+          },
+          {
+            text: "帮助",
+            items: [
+              {
+                text: "常见问题",
+                link: "https://github.com/mrjoechen/ShowcaseApp/wiki",
+              },
+              {
+                text: "功能请求",
+                link: "https://github.com/mrjoechen/ShowcaseApp/issues",
+              },
+              {
+                text: "问题反馈",
+                link: "https://github.com/mrjoechen/ShowcaseApp/issues",
+              },
+              { text: "隐私政策", link: "/zh/privacypolicy" },
+              { text: "用户条款", link: "/zh/termsconditions" },
+            ],
+          },
+        ],
+        sidebar: [
+          {
+            text: "文档",
+            items: [
+              { text: "隐私政策", link: "/zh/privacypolicy" },
+              { text: "用户条款", link: "/zh/termsconditions" },
+            ],
+          },
+        ],
+        outline: { label: "本页目录" },
+        docFooter: { prev: "上一页", next: "下一页" },
+        darkModeSwitchLabel: "外观",
+        lightModeSwitchTitle: "切换到浅色",
+        darkModeSwitchTitle: "切换到深色",
+        sidebarMenuLabel: "菜单",
+        returnToTopLabel: "回到顶部",
+        langMenuLabel: "语言",
+        footer: {
+          message:
+            '<a href="termsconditions.html">用户条款</a> · <a href="privacypolicy.html">隐私政策</a>',
+          copyright: "Copyright © 2023-present Joe Chen",
+        },
+      },
     },
   },
   themeConfig: {
-    logo: "images/showcase_logo.png",
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: "Home", link: "/" },
-      // { text: "Examples", link: "/markdown-examples" },
-      { text: "Download", link: "/download" },
-      {
-        text: "Changelog",
-        items: [
-          {
-            text: "v1.0.28",
-            link: "https://github.com/mrjoechen/ShowcaseApp/releases/tag/v1.0.28",
-          },
-          {
-            text: "v1.0.26",
-            link: "https://github.com/mrjoechen/ShowcaseApp/releases/tag/v1.0.26",
-          },
-        ],
-      },
-      {
-        text: "Help",
-        items: [
-          {
-            text: "常见问题",
-            link: "https://github.com/mrjoechen/ShowcaseApp/wiki",
-          },
-          {
-            text: "功能请求",
-            link: "https://github.com/mrjoechen/ShowcaseApp/issues",
-          },
-          {
-            text: "问题反馈",
-            link: "https://github.com/mrjoechen/ShowcaseApp/issues",
-          },
-          {
-            text: "隐私政策",
-            link: "privacypolicy",
-          },
-          {
-            text: "用户条款",
-            link: "/termsconditions",
-          },
-        ],
-      },
-    ],
-
-    sidebar: [
-      {
-        text: "Docs",
-        items: [
-          // { text: "Markdown Examples", link: "/markdown-examples" },
-          // { text: "Runtime API Examples", link: "/api-examples" },
-          // { text: "Star", link: "/api-examples" },
-          { text: "privacy and policy", link: "/privacypolicy" },
-          { text: "terms and conditions", link: "/termsconditions" },
-        ],
-      },
-    ],
-
+    logo: "/images/showcase_logo.png",
     socialLinks: [
       { icon: "github", link: "https://github.com/mrjoechen/ShowcaseApp" },
       { icon: "x", link: "https://x.com/chenqiao1104" },
@@ -94,11 +210,6 @@ export default defineConfig({
         // You can include a custom label for accessibility too (optional but recommended):
         ariaLabel: '小红书'
       }
-    ],
-    footer: {
-      message:
-        '<a href="termsconditions.html">Terms conditions</a>    <a href="/privacypolicy.html">Privacy policy</a>',
-      copyright: "Copyright © 2023-present Joe Chen",
-    },
+    ]
   },
 });

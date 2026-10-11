@@ -1,22 +1,21 @@
-### Download
+# Download
 
-[<img src="https://ghfast.top/https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/docs/images/google-play-badge.png" width="323" height="125" />](https://play.google.com/store/apps/details?id=com.alpha.showcase)
-[<img src="https://ghfast.top/https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/docs/images/github-badge.png" width="323" height="125" />](https://github.com/mrjoechen/ShowcaseApp/releases/latest)
+Android version is on Google Play, and install packages are also available on GitHub Releases. iOS version is still on TestFlight. The feature guide is on the [home page](/).
 
-> The iOS version is still on TestFlight.
+[<img src="/images/google-play-badge.png" width="323" height="125" alt="Get it on Google Play" />](https://play.google.com/store/apps/details?id=com.alpha.showcase)
+[<img src="/images/github-badge.png" width="323" height="125" alt="Download on GitHub" />](https://github.com/mrjoechen/ShowcaseApp/releases/latest)
 
-[<img src="https://ghfast.top/https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/docs/images/apple_app_store_badge.png" width="323" height="125" />](https://testflight.apple.com/join/D8va19RR)
+[<img src="/images/apple_app_store_badge.png" width="323" height="125" alt="Download on the App Store" />](https://testflight.apple.com/join/D8va19RR)
 
+## Telegram group
 
-### Telegram Group
+[<img src="/images/showcase_telegram_group.png" width="254" height="378" alt="Telegram group" />](https://t.me/showcase_app_group)
 
-[<img src="https://ghfast.top/https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/docs/images/showcase_telegram_group.png" width="254" height="378" />](https://t.me/showcase_app_group)
+## WeChat group
 
-### Wechat Group
+[<img src="/images/showcase_wechat_group.png" width="254" height="378" alt="WeChat group" />](/images/showcase_wechat_group.png)
 
-[<img src="https://ghfast.top/https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/resource/showcase_wechat_group.jpg" width="254" height="378" />](https://raw.githubusercontent.com/mrjoechen/ShowcaseApp/main/resource/showcase_wechat_group.jpg)
-
-- [Donate](https://mrjoechen.github.io/ShowcaseApp/donate)
-- [Privacy policy](https://mrjoechen.github.io/ShowcaseApp/privacypolicy)
-- [Terms and conditions](https://mrjoechen.github.io/ShowcaseApp/termsconditions)
-- [Telegram Group feedback](https://t.me/showcase_app_group)
+- [Donate](/donate)
+- [Privacy policy](/privacypolicy)
+- [Terms and conditions](/termsconditions)
+- [Telegram group](https://t.me/showcase_app_group)

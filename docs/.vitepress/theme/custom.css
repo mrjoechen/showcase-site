@@ -1,0 +1,56 @@
+.VPHome {
+  background:
+    radial-gradient(ellipse 52% 38% at 8% 0%, rgba(100, 108, 255, 0.16), transparent 70%),
+    radial-gradient(ellipse 46% 36% at 96% 4%, rgba(86, 114, 205, 0.12), transparent 72%),
+    var(--vp-c-bg);
+}
+
+.dark .VPHome {
+  background:
+    radial-gradient(ellipse 52% 38% at 8% 0%, rgba(168, 177, 255, 0.14), transparent 70%),
+    radial-gradient(ellipse 46% 36% at 96% 4%, rgba(92, 115, 231, 0.16), transparent 72%),
+    var(--vp-c-bg);
+}
+
+.VPHome .VPHero .name,
+.VPHome .VPHero .clip {
+  background: none;
+  color: var(--vp-c-brand-1);
+  -webkit-text-fill-color: var(--vp-c-brand-1);
+}
+
+.VPHome .VPHero .tagline {
+  max-width: 38rem;
+  line-height: 1.65;
+}
+
+.VPHome .VPFeatures {
+  padding-top: 12px;
+}
+
+.VPHome .VPFeature {
+  border: 1px solid var(--vp-c-divider);
+  background: color-mix(in srgb, var(--vp-c-bg) 86%, #e4e9ff);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.dark .VPHome .VPFeature {
+  background: color-mix(in srgb, var(--vp-c-bg-soft) 88%, #1c2748);
+}
+
+.VPHome .VPFeature:hover {
+  border-color: var(--vp-c-brand-2);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 720px) {
+  .VPHome .VPFeature:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .VPHome .VPFeature {
+    transition: none;
+  }
+}
