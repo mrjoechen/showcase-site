@@ -1,50 +1,12 @@
 import { defineConfig } from "vitepress";
 
 const isFirebaseDeploy = process.env.DEPLOY_TARGET === "firebase";
-const siteBase = isFirebaseDeploy ? "/" : "/showcase-site/";
-
-function withSiteBase(url: string) {
-  if (!url.startsWith("/") || url.startsWith("//")) return url;
-  return `${siteBase}${url}`.replace(/([^:]\/)\/+/g, "$1");
-}
-
-function prefixHtmlImageSrc(content: string) {
-  return content.replace(
-    /(src=["'])(\/(?!\/)[^"']*)/g,
-    (_match, attr, url) => `${attr}${withSiteBase(url)}`
-  );
-}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "ShowcaseApp",
   description: "A digital photo frame for local photos, network libraries, and your own AI.",
-  base: siteBase,
-  markdown: {
-    config(md) {
-      const imageRule = md.renderer.rules.image;
-      md.renderer.rules.image = (tokens, idx, options, env, self) => {
-        const token = tokens[idx];
-        const url = token.attrGet("src");
-        if (url) token.attrSet("src", withSiteBase(url));
-        return imageRule(tokens, idx, options, env, self);
-      };
-
-      // Raw <img> in Markdown is not rewritten by VitePress, so public images
-      // would miss the GitHub Pages base and 404.
-      md.core.ruler.after("inline", "local-image-base", (state) => {
-        const visit = (tokens: { type: string; content: string; children?: typeof tokens }[]) => {
-          for (const token of tokens) {
-            if (token.type === "html_inline" || token.type === "html_block") {
-              token.content = prefixHtmlImageSrc(token.content);
-            }
-            if (token.children) visit(token.children);
-          }
-        };
-        visit(state.tokens);
-      });
-    },
-  },
+  base: isFirebaseDeploy ? "/" : "/showcase-site/",
   head: [["link", { rel: "icon", href: "/images/favicon.ico" }]],
   locales: {
     root: {
