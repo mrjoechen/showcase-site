@@ -25,4 +25,6 @@ Thank you again for your support! We are committed to working hard and deliverin
 
 [<img src="./images/ic_buy_me_coffee.webp" width="323" height="82" alt="Buy me a coffee" />](https://ko-fi.com/joechen)
 
+## 微信赞赏 🫶
+
 <img src="./images/wechat_donate.png" width="323" height="323" alt="WeChat donate" />
