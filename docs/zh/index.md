@@ -42,3 +42,20 @@ features:
     title: 图片隐私保护
     details: 人脸检测在设备本地完成。检测到人脸的照片不会上传，也不会交给模型处理。
 ---
+
+<div class="home-preview">
+
+## 预览
+
+<div class="home-screenshots">
+  <img src="../images/app/home_zh.webp" width="720" height="1560" loading="lazy" alt="首页" />
+  <img src="../images/app/add_source_zh.webp" width="720" height="1560" loading="lazy" alt="添加来源" />
+  <img src="../images/app/settings_1_zh.webp" width="720" height="1560" loading="lazy" alt="展示设置" />
+  <img src="../images/app/settings_2_zh.webp" width="720" height="1560" loading="lazy" alt="更多展示设置" />
+</div>
+
+<video class="home-video" src="../images/app/style-picker.mp4" poster="../images/app/style-picker-poster.webp" width="1280" height="576" controls muted loop playsinline preload="none" aria-label="展示方式的录屏"></video>
+
+<video class="home-video" src="../images/app/playback.mp4" poster="../images/app/playback-poster.webp" width="1280" height="590" controls muted loop playsinline preload="none" aria-label="幻灯片播放录屏，带 AI 摘要和天气"></video>
+
+</div>

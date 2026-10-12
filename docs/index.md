@@ -42,3 +42,20 @@ features:
     title: Photo privacy
     details: Face detection runs locally on the device. A photo with a detected face is not uploaded or sent to a model.
 ---
+
+<div class="home-preview">
+
+## Preview
+
+<div class="home-screenshots">
+  <img src="./images/app/home_en.webp" width="720" height="1560" loading="lazy" alt="Home screen" />
+  <img src="./images/app/add_source_en.webp" width="720" height="1560" loading="lazy" alt="Add a source" />
+  <img src="./images/app/settings_1_en.webp" width="720" height="1560" loading="lazy" alt="Display settings" />
+  <img src="./images/app/settings_2_en.webp" width="720" height="1560" loading="lazy" alt="More display settings" />
+</div>
+
+<video class="home-video" src="./images/app/style-picker.mp4" poster="./images/app/style-picker-poster.webp" width="1280" height="576" controls muted loop playsinline preload="none" aria-label="Screen recording of the display styles"></video>
+
+<video class="home-video" src="./images/app/playback.mp4" poster="./images/app/playback-poster.webp" width="1280" height="590" controls muted loop playsinline preload="none" aria-label="Screen recording of slideshow playback with AI summaries and weather"></video>
+
+</div>
