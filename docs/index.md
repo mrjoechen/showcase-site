@@ -39,8 +39,8 @@ features:
     title: AI summaries
     details: Connect your own model to describe the current photo.
   - icon: 🔒
-    title: Photo privacy
-    details: Face detection runs locally on the device. A photo with a detected face is not uploaded or sent to a model.
+    title: Local-first privacy
+    details: Your photos are displayed locally by default. Optional features like AI image summaries only connect to the service endpoints you explicitly configure. Face detection runs on your device, and by default photos with a detected face are skipped for AI summaries.
 ---
 
 <div class="home-preview">
