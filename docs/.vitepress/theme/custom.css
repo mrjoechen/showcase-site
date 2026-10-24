@@ -135,3 +135,21 @@
     transition: none;
   }
 }
+
+/* Nav bar: frosted glass once the page is scrolled. VitePress only fixes the nav
+   from 960px up; at the top of the home page it stays transparent. The extra
+   .VPNav outranks the default theme's scoped background rules. */
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  @media (min-width: 960px) {
+    .VPNav .VPNavBar:not(.has-sidebar):not(.home.top),
+    .VPNav .VPNavBar.has-sidebar:not(.home.top) .content-body {
+      background-color: color-mix(in srgb, var(--vp-c-bg) 72%, transparent);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    .VPNav .VPNavBar:not(.has-sidebar):not(.home.top) .divider {
+      background-color: var(--vp-c-divider);
+    }
+  }
+}
