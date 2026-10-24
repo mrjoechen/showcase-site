@@ -331,6 +331,13 @@ export const homeCopy = {
     styles: "Display style",
     pause: "Pause recording",
     play: "Play recording",
+    motionEyebrow: "In motion",
+    motionTitle: "Many ways to show your photos.",
+    motionDetails: "Screen recordings of every display style, on a phone in landscape.",
+    stylePickerLabel: "Screen recording of the display styles",
+    stylePickerCaption: "Switching display styles",
+    playbackLabel: "Screen recording of slideshow playback with AI summaries and weather",
+    playbackCaption: "Slideshow with AI summaries and weather",
   },
   zh: {
     heroAlt: {
@@ -349,5 +356,12 @@ export const homeCopy = {
     styles: "展示方式",
     pause: "暂停录屏",
     play: "播放录屏",
+    motionEyebrow: "动态演示",
+    motionTitle: "多种展示方式，随心切换",
+    motionDetails: "每种展示方式的手机横屏录屏。",
+    stylePickerLabel: "展示方式的录屏",
+    stylePickerCaption: "切换展示样式",
+    playbackLabel: "幻灯片播放录屏，带 AI 摘要和天气",
+    playbackCaption: "带 AI 摘要和天气的幻灯片",
   },
 } satisfies Record<Locale, unknown>;

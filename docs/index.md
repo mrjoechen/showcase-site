@@ -39,22 +39,3 @@ features:
     title: Local-first privacy
     details: Your photos are displayed locally by default. Optional features like AI image summaries only connect to the service endpoints you explicitly configure. Face detection runs on your device, and by default photos with a detected face are skipped for AI summaries.
 ---
-
-<div class="home-motion">
-
-<HomeHeading eyebrow="In motion" title="Seven ways to show your photos." details="Screen recordings of every display style, on a phone in landscape." />
-
-<StyleReel />
-
-<div class="home-videos">
-  <figure>
-    <video src="./images/app/style-picker.mp4" poster="./images/app/style-picker-poster.webp" width="1280" height="576" controls muted loop playsinline preload="none" aria-label="Screen recording of the display styles"></video>
-    <figcaption>Switching display styles</figcaption>
-  </figure>
-  <figure>
-    <video src="./images/app/playback.mp4" poster="./images/app/playback-poster.webp" width="1280" height="590" controls muted loop playsinline preload="none" aria-label="Screen recording of slideshow playback with AI summaries and weather"></video>
-    <figcaption>Slideshow with AI summaries and weather</figcaption>
-  </figure>
-</div>
-
-</div>

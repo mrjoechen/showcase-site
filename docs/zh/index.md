@@ -39,22 +39,3 @@ features:
     title: 本地优先的隐私设计
     details: 照片默认在设备本地展示。AI 图像摘要等可选功能只会连接你明确配置的服务地址。人脸检测在设备本地完成，默认跳过检测到人脸的照片，不为其生成 AI 摘要。
 ---
-
-<div class="home-motion">
-
-<HomeHeading eyebrow="动态演示" title="七种展示方式，随心切换" details="每种展示方式的手机横屏录屏。" />
-
-<StyleReel />
-
-<div class="home-videos">
-  <figure>
-    <video src="../images/app/style-picker.mp4" poster="../images/app/style-picker-poster.webp" width="1280" height="576" controls muted loop playsinline preload="none" aria-label="展示方式的录屏"></video>
-    <figcaption>切换展示样式</figcaption>
-  </figure>
-  <figure>
-    <video src="../images/app/playback.mp4" poster="../images/app/playback-poster.webp" width="1280" height="590" controls muted loop playsinline preload="none" aria-label="幻灯片播放录屏，带 AI 摘要和天气"></video>
-    <figcaption>带 AI 摘要和天气的幻灯片</figcaption>
-  </figure>
-</div>
-
-</div>
