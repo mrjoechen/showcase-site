@@ -3,11 +3,8 @@ layout: home
 
 hero:
   name: "Showcase"
-  text: "Showcase a gallery of lively moments."
-  tagline: 动态图片画廊，展示精彩瞬间。
-  image:
-    src: /images/showcase_logo.png
-    alt: Showcase App
+  text: "把每块屏幕，变成相框"
+  tagline: 动态图片画廊，展示精彩瞬间。连接本地相册与网络图库，搭配时间、天气和你自己的 AI。
   actions:
     - theme: brand
       text: 下载
@@ -43,19 +40,21 @@ features:
     details: 照片默认在设备本地展示。AI 图像摘要等可选功能只会连接你明确配置的服务地址。人脸检测在设备本地完成，默认跳过检测到人脸的照片，不为其生成 AI 摘要。
 ---
 
-<div class="home-preview">
+<div class="home-motion">
 
-## 预览
+<HomeHeading eyebrow="动态演示" title="七种展示方式，随心切换" details="每种展示方式的手机横屏录屏。" />
 
-<div class="home-screenshots">
-  <img src="../images/app/home_zh.webp" width="720" height="1560" loading="lazy" alt="首页" />
-  <img src="../images/app/add_source_zh.webp" width="720" height="1560" loading="lazy" alt="添加来源" />
-  <img src="../images/app/settings_1_zh.webp" width="720" height="1560" loading="lazy" alt="展示设置" />
-  <img src="../images/app/settings_2_zh.webp" width="720" height="1560" loading="lazy" alt="更多展示设置" />
+<StyleReel />
+
+<div class="home-videos">
+  <figure>
+    <video src="../images/app/style-picker.mp4" poster="../images/app/style-picker-poster.webp" width="1280" height="576" controls muted loop playsinline preload="none" aria-label="展示方式的录屏"></video>
+    <figcaption>切换展示样式</figcaption>
+  </figure>
+  <figure>
+    <video src="../images/app/playback.mp4" poster="../images/app/playback-poster.webp" width="1280" height="590" controls muted loop playsinline preload="none" aria-label="幻灯片播放录屏，带 AI 摘要和天气"></video>
+    <figcaption>带 AI 摘要和天气的幻灯片</figcaption>
+  </figure>
 </div>
-
-<video class="home-video" src="../images/app/style-picker.mp4" poster="../images/app/style-picker-poster.webp" width="1280" height="576" controls muted loop playsinline preload="none" aria-label="展示方式的录屏"></video>
-
-<video class="home-video" src="../images/app/playback.mp4" poster="../images/app/playback-poster.webp" width="1280" height="590" controls muted loop playsinline preload="none" aria-label="幻灯片播放录屏，带 AI 摘要和天气"></video>
 
 </div>

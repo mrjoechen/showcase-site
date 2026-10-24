@@ -3,11 +3,8 @@ layout: home
 
 hero:
   name: "Showcase"
-  text: "Showcase a gallery of lively moments."
-  tagline: 动态图片画廊，展示精彩瞬间
-  image:
-    src: /images/showcase_logo.png
-    alt: Showcase App
+  text: "Your photos, on every screen."
+  tagline: Showcase a gallery of lively moments — local photos and network libraries, with the time, weather, and your own AI.
   actions:
     - theme: brand
       text: Download
@@ -43,19 +40,21 @@ features:
     details: Your photos are displayed locally by default. Optional features like AI image summaries only connect to the service endpoints you explicitly configure. Face detection runs on your device, and by default photos with a detected face are skipped for AI summaries.
 ---
 
-<div class="home-preview">
+<div class="home-motion">
 
-## Preview
+<HomeHeading eyebrow="In motion" title="Seven ways to show your photos." details="Screen recordings of every display style, on a phone in landscape." />
 
-<div class="home-screenshots">
-  <img src="./images/app/home_en.webp" width="720" height="1560" loading="lazy" alt="Home screen" />
-  <img src="./images/app/add_source_en.webp" width="720" height="1560" loading="lazy" alt="Add a source" />
-  <img src="./images/app/settings_1_en.webp" width="720" height="1560" loading="lazy" alt="Display settings" />
-  <img src="./images/app/settings_2_en.webp" width="720" height="1560" loading="lazy" alt="More display settings" />
+<StyleReel />
+
+<div class="home-videos">
+  <figure>
+    <video src="./images/app/style-picker.mp4" poster="./images/app/style-picker-poster.webp" width="1280" height="576" controls muted loop playsinline preload="none" aria-label="Screen recording of the display styles"></video>
+    <figcaption>Switching display styles</figcaption>
+  </figure>
+  <figure>
+    <video src="./images/app/playback.mp4" poster="./images/app/playback-poster.webp" width="1280" height="590" controls muted loop playsinline preload="none" aria-label="Screen recording of slideshow playback with AI summaries and weather"></video>
+    <figcaption>Slideshow with AI summaries and weather</figcaption>
+  </figure>
 </div>
-
-<video class="home-video" src="./images/app/style-picker.mp4" poster="./images/app/style-picker-poster.webp" width="1280" height="576" controls muted loop playsinline preload="none" aria-label="Screen recording of the display styles"></video>
-
-<video class="home-video" src="./images/app/playback.mp4" poster="./images/app/playback-poster.webp" width="1280" height="590" controls muted loop playsinline preload="none" aria-label="Screen recording of slideshow playback with AI summaries and weather"></video>
 
 </div>
